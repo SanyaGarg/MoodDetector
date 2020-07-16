@@ -32,6 +32,10 @@ import java.util.List;
 public class AcitivityFragment extends Fragment {
 
     public static AcitivityFragment newInstance() {
+        AcitivityFragment fragment = new AcitivityFragment();
+        Bundle args = new Bundle();
+
+        fragment.setArguments(args);
         return new AcitivityFragment();
     }
 
