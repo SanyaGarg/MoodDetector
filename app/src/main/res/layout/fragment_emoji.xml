@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".acitivity.EmojiFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:text="@string/feelings"
+        android:textSize="20sp" />
+
+
+    <ImageView
+        android:id="@+id/excited"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:src="@drawable/excited"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="248dp"
+        android:text="Excited"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <ImageView
+        android:id="@+id/happy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginStart="50dp"
+        android:src="@drawable/happy"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="348dp"
+        android:layout_marginStart="52dp"
+        android:text="Happy"/>
+
+
+    <ImageView
+        android:id="@+id/indifferent"
+        android:layout_width="73dp"
+        android:layout_height="69dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="300dp"
+        android:src="@drawable/indifferent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="369dp"
+        android:text="Indifferent"/>
+
+    <ImageView
+        android:id="@+id/worried"
+        android:layout_width="58dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="300dp"
+        android:src="@drawable/worried" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="360dp"
+        android:text="Worried"/>
+0
+    <ImageView
+        android:id="@+id/angry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="420dp"
+        android:src="@drawable/angry" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="470dp"
+        android:text="Angry"/>
+
+    <ImageView
+        android:id="@+id/sad"
+        android:layout_width="65dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="410dp"
+        android:src="@drawable/sad" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="470dp"
+        android:text="Sad"/>
+
+
+</FrameLayout>
