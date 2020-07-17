@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProviders;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -29,6 +30,8 @@ import com.google.android.material.navigation.NavigationView;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.moody.acitivity.NoteFragment.TEXT;
+
 public class AcitivityFragment extends Fragment {
 
     public static AcitivityFragment newInstance() {
@@ -39,6 +42,7 @@ public class AcitivityFragment extends Fragment {
         return new AcitivityFragment();
     }
 
+    SharedPreferences sharedPreferences;
     RecyclerView recyclerView;
     List<Model> itemList;
    ImageView additional;
@@ -52,7 +56,7 @@ public class AcitivityFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        recyclerView.setAdapter(new ItemAdapter(initDate()));
+        recyclerView.setAdapter(new ItemAdapter(initDate("Array")));
 
         additional = view.findViewById(R.id.add);
 
@@ -71,16 +75,15 @@ public class AcitivityFragment extends Fragment {
         return view;
     }
 
-    private List<Model> initDate(){
+    private List<Model> initDate(String arrayName){
         itemList = new ArrayList<>();
-        itemList.add(new Model("Work","12:00pm",R.drawable.ic_action_calendar));
-        itemList.add(new Model("Work","12:00pm",R.drawable.ic_action_calendar));
-        itemList.add(new Model("Work","12:00pm",R.drawable.ic_action_calendar));
-        itemList.add(new Model("Work","12:00pm",R.drawable.ic_action_calendar));
-        itemList.add(new Model("Work","12:00pm",R.drawable.ic_action_calendar));
-        itemList.add(new Model("Work","12:00pm",R.drawable.ic_action_calendar));
-        itemList.add(new Model("Work","12:00pm",R.drawable.ic_action_calendar));
-        itemList.add(new Model("Work","12:00pm",R.drawable.ic_action_calendar));
+
+        sharedPreferences = this.getActivity().getSharedPreferences("text",Context.MODE_PRIVATE);
+        int size = sharedPreferences.getInt(arrayName+"_size",0);
+        for(int i=0;i<size;i++){
+            String name =sharedPreferences.getString(arrayName+"_"+i,null);
+
+        }
 
         return itemList;
     }

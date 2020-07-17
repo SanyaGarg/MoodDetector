@@ -3,6 +3,9 @@ package com.example.moody.calendar;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.app.DatePickerDialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,12 +15,18 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CalendarView;
+import android.widget.DatePicker;
 
 import com.example.moody.R;
 
+import java.util.Calendar;
+
 public class CalendarFragment extends Fragment {
 
-    private CalendarViewModel mViewModel;
+    private DatePickerDialog.OnDateSetListener mDateSetListener;
+    String Date;
+    CalendarView calendarView;
 
     public static CalendarFragment newInstance() {
         return new CalendarFragment();
@@ -26,14 +35,16 @@ public class CalendarFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.calendar_fragment, container, false);
+        View view=inflater.inflate(R.layout.calendar_fragment, container, false);
+        calendarView = (CalendarView) view.findViewById(R.id.calendar);
+
+        return view;
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(CalendarViewModel.class);
-        // TODO: Use the ViewModel
+
     }
 
 }

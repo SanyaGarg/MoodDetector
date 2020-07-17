@@ -34,9 +34,11 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ItemAdapter.ViewHolder holder, int position) {
 
-        holder.itemImage.setImageResource(itemList1.get(position).getImg());
-        holder.itemtxt.setText(itemList1.get(position).getDesc());
-        holder.time.setText(itemList1.get(position).getTime());
+        final Model model = itemList1.get(position);
+
+        holder.itemImage.setImageResource(model.getImg());
+        holder.itemtxt.setText(model.getDesc());
+        holder.time.setText(model.getTime());
     }
 
     @Override
